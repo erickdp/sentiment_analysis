@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 
-from srv.sentiment.sentiment_analysis import Sentiment_Service
+from srv.sentiment.sentiment_analysis import SentimentService
 
 app = FastAPI()
-inf_sent = Sentiment_Service()
+inf_sent = SentimentService()
 
 
 @app.get("/")

@@ -4,7 +4,7 @@ from optimum.onnxruntime import ORTModelForSequenceClassification
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 
-class Sentiment_Service:
+class SentimentService:
     @staticmethod
     def __load_pipeline(model_id: str, format: str):
 
@@ -31,7 +31,7 @@ class Sentiment_Service:
         return TextClassificationPipeline(model=model, tokenizer=tokenizer)
 
     def __init__(self):
-        self.__analysis = Sentiment_Service.__load_pipeline(
+        self.__analysis = SentimentService.__load_pipeline(
             os.getenv('MODEL_ID'),
             'onnx'
         )
