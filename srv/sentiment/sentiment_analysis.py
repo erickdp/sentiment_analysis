@@ -32,7 +32,7 @@ class Sentiment_Service:
 
     def __init__(self):
         self.__analysis = Sentiment_Service.__load_pipeline(
-            'gg-ai/q-o-distill',
+            os.getenv('MODEL_ID'),
             'onnx'
         )
 
