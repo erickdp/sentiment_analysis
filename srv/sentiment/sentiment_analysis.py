@@ -2,7 +2,8 @@ import os
 from optimum.pipelines import TextClassificationPipeline
 from optimum.onnxruntime import ORTModelForSequenceClassification
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
+from dotenv import load_dotenv
+from pathlib import Path
 
 class SentimentService:
     @staticmethod
@@ -42,3 +43,7 @@ class SentimentService:
             else 0 if label == 'LABEL_0' \
             else -1 if label == 'LABEL_2' \
             else None
+
+if __name__ == '__main__':
+
+    service = SentimentService()
