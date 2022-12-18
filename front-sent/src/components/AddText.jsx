@@ -18,8 +18,9 @@ export const AddText = ({ onNewText }) => {
         <>
             <form onSubmit={onSubmit}>
                 <input
+                    className='form-control form-control-lg'
                     value={inputValue}
-                    placeholder="Ingrese texto a analizar"
+                    placeholder="Ingrese texto para analizar"
                     type="text"
                     onChange={onInputChange}
                 />
